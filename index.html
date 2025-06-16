@@ -12,40 +12,112 @@
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="body">
+  <div class="form-success-message">
+    <h2 class="form-success-title">
+      Message Sent!
+    </h2>
+    <p class="form-success-text">
+      Thanks for completing the form. We'll be in touch soon!
+    </p>
+  </div>
+  <div class="container">
+    <main class="content">
+      <h1 class="title">
+        Contact Us
+      </h1>
 
-  Contact Us
+      <form class="contact-form">
+        <!-- First Name -->
+        <div class="form-field">
+          <label for="fisrst-name" class="form-label">
+            First Name <span class="form-required">*</span>
+          </label>
+          <input type="text" id="fisrst-name" class="form-input" required>
+          <p class="form-error">
+            This field is required
+          </p>
+        </div>
 
-  First Name
-  This field is required
+        <!-- Last Name -->
+        <div class="form-field">
+          <label for="last-name" class="form-label">
+            Last Name <span class="form-required">*</span>
+          </label>
+          <input type="text" id="last-name" class="form-input" required>
+          <p class="form-error">
+            This field is required
+          </p>
+        </div>
 
-  Last Name
-  This field is required
+        <div class="form-field">
+          <label for="email" class="form-label">
+            Email Address <span class="form-required">*</span>
+          </label>
+          <input type="email" id="email" class="form-input" required>
+          <p class="form-error">
+            Please enter a valid email address
+          </p>
+          <p class="form-error">
+            This field is required
+          </p>
+        </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <!-- Query Type -->
+        <div class="form-field">
+          <label class="form-label">
+            Query Type <span class="form-required">*</span>
+          </label>
+          <div class="form-radio-group">
+            <label class="form-radio">
+              <input type="radio" name="query-type" value="general" required>
+              <span class="form-radio-label">General Enquiry</span>
+            </label>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+            <label class="form-radio">
+              <input type="radio" name="query-type" value="support">
+              <span class="form-radio-label">Support Request</span>
+            </label>
+          </div>
+          <p class="form-error">
+            Please select a query type
+          </p>
+        </div>
 
-  Message
-  This field is required
+        <!-- Message -->
+        <div class="form-field">
+          <label for="message" class="form-label">
+            Message <span class="form-required">*</span>
+          </label>
+          <textarea id="message" class="form-textarea" rows="5" required></textarea>
+          <p class="form-error">
+            This field is required
+          </p>
+        </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+        <!-- Consent Checkbox -->
+        <div class="form-field form-checkbox-field">
+          <input type="checkbox" id="consent" class="form-checkbox" required>
+          <label for="consent" class="form-checkbox-label">
+            I consent to being contacted by the team <span class="form-required">*</span>
+          </label>
+          <p class="form-error">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
 
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
+        <!-- Submit -->
+        <button type="submit" class="form-submit">
+          Submit
+        </button>
+      </form>
+    </main>
+  </div>
   <script src="./js/main.js"></script>
 </body>
 

@@ -1,0 +1,194 @@
+label {
+  display: block;
+}
+
+.body {
+  background-color: hsl(148, 38%, 91%);
+  color: hsl(187, 24%, 22%);
+}
+
+.form-success-message {
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  width: 70%;
+  margin-inline: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.form-success-title {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-success-title::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-image: url('./assets/images/icon-success-check.svg');
+  /* 画像パスに注意 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.container {
+  width: 90%;
+  margin: 1rem auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+}
+
+.container.submit {
+  margin-top: 0;
+}
+
+.content {
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  border: 1px solid hsl(187, 24%, 22%);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  border-color: hsl(186, 15%, 59%);
+}
+
+.form-input.error {
+  border-color: hsl(0, 66%, 54%);
+}
+
+.form-error {
+  color: hsl(0, 66%, 54%);
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.form-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-radio {
+  border: 1px solid hsl(187, 24%, 22%);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.form-radio:hover {
+  border-color: hsl(186, 15%, 59%);
+}
+
+/* input自体は非表示に */
+.form-radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+}
+
+.form-radio-label {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* カスタム見た目（丸） */
+.form-radio-label::before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  /* サイズ調整 */
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 2px solid hsl(186, 15%, 59%);
+  margin-right: 1rem;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+/* 選択された状態 */
+.form-radio input[type="radio"]:checked+.form-radio-label::before {
+  background-color: hsl(169, 82%, 27%);
+  /* 内側を塗る */
+  box-shadow: inset 0 0 0 3px white;
+  /* 中心を白く抜く */
+}
+
+.form-radio input[type="radio"]:checked+.form-radio-label {
+  background-color: hsl(148, 38%, 91%);
+}
+
+.form-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.form-checkbox-label {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* チェックボックスの枠 */
+.form-checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 4px;
+  background: white;
+  transition: background 0.2s ease;
+}
+
+/* チェックされた時 */
+.form-checkbox:checked+.form-checkbox-label::before {
+  background-image: url('./assets/images/icon-checkbox-check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-submit {
+  width: 100%;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
