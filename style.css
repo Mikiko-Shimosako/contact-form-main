@@ -81,7 +81,8 @@ label {
   border-color: hsl(186, 15%, 59%);
 }
 
-.form-input.error {
+.form-input.error,
+.form-textarea.error {
   border-color: hsl(0, 66%, 54%);
 }
 
